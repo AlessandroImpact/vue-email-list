@@ -7,12 +7,12 @@ const app = new Vue(
 
 
         mounted() {
-            for (i=0;i<=9;i++) {
+            for (let i=0;i<10;i++) {
 
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then( (response) => {
+         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then((risposta) => {
             
-            this.emails.push(response.data.response)
+            this.emails.push(risposta.data.response);
         });
 
             }
@@ -20,3 +20,4 @@ const app = new Vue(
 
     }
 ) 
+
